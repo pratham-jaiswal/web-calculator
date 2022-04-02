@@ -1,0 +1,114 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    font-family: Gotham Rounded, sans-serif;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(0deg, #000, #262626);
+}
+
+.calculator-container{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculator-container .span-two-calculator-ac{
+    background: red;
+    color: white;
+}
+
+.calculator-container .span-two-calculator-result{
+    background: rgb(0, 207, 0);;
+    color: white;
+}
+
+.calculator-container button{
+    cursor: pointer;
+    font-size: 1.5rem;
+    border: 1px solid black;
+    border-radius: 50px;
+    outline: none;
+    margin: 1vh 0.5vw;
+    background-color: white;
+}
+
+.calculator-container button:hover{
+    font-size: 1.2rem;
+    background-color: rgba(255, 255, 255, .9)
+}
+
+.calculator-operand{
+    color: rgb(0, 207, 0);
+}
+
+[class*="span-two-"]{
+    grid-column: span 2;
+}
+
+.calculator-output{
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px 0;
+    word-wrap: break-word;
+    word-break: break-all;
+    background-color: rgb(253, 185, 60);
+    border-radius: 20px;
+}
+
+.calculator-output .previous-operand{
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+}
+  
+.calculator-output .current-operand{
+    color: white;
+    font-size: 2rem;
+}
+
+@media screen and (max-width: 450px) {
+    .calculator-container{
+        min-height: 100vh;
+        grid-template-columns: repeat(4, 85px);
+        grid-template-rows: minmax(100px, auto) repeat(5, 100px);
+    }
+    
+    .calculator-container button{
+        font-size: 1.8rem;
+        margin: 1vh 0.8vw;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .calculator-container{
+        min-height: 100vh;
+        grid-template-columns: repeat(4, 60px);
+        grid-template-rows: minmax(80px, auto) repeat(5, 70px);
+    }
+    
+    .calculator-container button{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-height: 600px) {
+    .calculator-container{
+        min-height: 100vh;
+        grid-template-columns: repeat(4, 80px);
+        grid-template-rows: minmax(100px, auto) repeat(5, 80px);
+    }
+    
+    .calculator-container button{
+        font-size: 1.5rem;
+        margin: 01vh 0.5vw;
+    }
+}
