@@ -1,2 +1,2 @@
-# web-calculator
-A basic web based calculator to solve math expressions.
+A simple calculator made using HTML, CSS, JS.
+Supports keyboard input as well as click input.

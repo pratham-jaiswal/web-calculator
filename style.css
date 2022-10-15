@@ -9,7 +9,7 @@ body{
     background: linear-gradient(0deg, #000, #262626);
 }
 
-.calculator-container{
+.container{
     display: grid;
     justify-content: center;
     align-content: center;
@@ -18,17 +18,17 @@ body{
     grid-template-rows: minmax(120px, auto) repeat(5, 100px);
 }
 
-.calculator-container .span-two-calculator-ac{
+.container .span-two-ac{
     background: red;
     color: white;
 }
 
-.calculator-container .span-two-calculator-result{
+.container .span-two-result{
     background: rgb(0, 207, 0);;
     color: white;
 }
 
-.calculator-container button{
+.container button{
     cursor: pointer;
     font-size: 1.5rem;
     border: 1px solid black;
@@ -38,12 +38,12 @@ body{
     background-color: white;
 }
 
-.calculator-container button:hover{
+.container button:hover{
     font-size: 1.2rem;
     background-color: rgba(255, 255, 255, .9)
 }
 
-.calculator-operand{
+.operand{
     color: rgb(0, 207, 0);
 }
 
@@ -51,7 +51,7 @@ body{
     grid-column: span 2;
 }
 
-.calculator-output{
+.output{
     grid-column: 1 / -1;
     display: flex;
     align-items: flex-end;
@@ -65,49 +65,49 @@ body{
     border-radius: 20px;
 }
 
-.calculator-output .previous-operand{
+.output #previous-operand, .output #op{
     color: rgba(255, 255, 255, .75);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
   
-.calculator-output .current-operand{
+.output #current-operand{
     color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 @media screen and (max-width: 450px) {
-    .calculator-container{
+    .container{
         min-height: 100vh;
         grid-template-columns: repeat(4, 85px);
         grid-template-rows: minmax(100px, auto) repeat(5, 100px);
     }
     
-    .calculator-container button{
+    .container button{
         font-size: 1.8rem;
         margin: 1vh 0.8vw;
     }
 }
 
 @media screen and (max-width: 300px) {
-    .calculator-container{
+    .container{
         min-height: 100vh;
         grid-template-columns: repeat(4, 60px);
         grid-template-rows: minmax(80px, auto) repeat(5, 70px);
     }
     
-    .calculator-container button{
+    .container button{
         font-size: 1.5rem;
     }
 }
 
 @media screen and (max-height: 600px) {
-    .calculator-container{
+    .container{
         min-height: 100vh;
         grid-template-columns: repeat(4, 80px);
         grid-template-rows: minmax(100px, auto) repeat(5, 80px);
     }
     
-    .calculator-container button{
+    .container button{
         font-size: 1.5rem;
         margin: 01vh 0.5vw;
     }

@@ -5,33 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="script.js"></script>
     <title>Calculator</title>
 </head>
 <body>
-    <div class="calculator-container">
-        <div class="calculator-output">
-            <div data-prev-op class="previous-operand"></div>
-            <div data-curr-op class="current-operand"></div>
+    <div class="container">
+        <div class="output">
+            <div id="previous-operand"></div>
+            <span id="op"></span>
+            <div id="current-operand"></div>
         </div>
-        <button data-ac class="span-two-calculator-ac">AC</button>
-        <button data-clear class="calculator-clear">C</button>
-        <button data-operation class="calculator-operand">%</button>
-        <button data-num>7</button>
-        <button data-num>8</button>
-        <button data-num>9</button>
-        <button data-operation class="calculator-operand">*</button>
-        <button data-num>4</button>
-        <button data-num>5</button>
-        <button data-num>6</button>
-        <button data-operation class="calculator-operand">-</button>
-        <button data-num>1</button>
-        <button data-num>2</button>
-        <button data-num>3</button>
-        <button data-operation class="calculator-operand">+</button>
-        <button data-num>.</button>
-        <button data-num>0</button>
-        <button data-result class="span-two-calculator-result">=</button>
+        <button class="span-two-ac" value="ac">AC</button>
+        <button class="clear" value="c">C</button>
+        <button class="operand" value="/">/</button>
+        <button value="7">7</button>
+        <button value="8">8</button>
+        <button value="9">9</button>
+        <button class="operand" value="*">*</button>
+        <button value="4">4</button>
+        <button value="5">5</button>
+        <button value="6">6</button>
+        <button class="operand" value="-">-</button>
+        <button value="1">1</button>
+        <button value="2">2</button>
+        <button value="3">3</button>
+        <button class="operand" value="+">+</button>
+        <button value=".">.</button>
+        <button value="0">0</button>
+        <button class="span-two-result" value="=">=</button>
     </div>
 </body>
 </html>
